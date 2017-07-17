@@ -2,7 +2,6 @@ async_flask
 
 Shane Lynn 15/07/2014
 
-===========
 
 Test of asynchronous flask communication with web page. 
 
