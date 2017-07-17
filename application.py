@@ -29,7 +29,7 @@ thread_stop_event = Event()
 
 class RandomThread(Thread):
     def __init__(self):
-        self.delay = 1
+        self.delay = 2
         super(RandomThread, self).__init__()
 
     def randomNumberGenerator(self):
@@ -52,7 +52,7 @@ class RandomThread(Thread):
 @app.route('/')
 def index():
     #only by sending this page first will the client be connected to the socketio instance
-    return render_template('index.html')
+    return render_template('index.html', delay=2)
 
 @socketio.on('connect', namespace='/test')
 def test_connect():
